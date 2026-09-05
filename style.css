@@ -1,0 +1,442 @@
+/* Clean & Full-Screen Section Layout */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Header & Sticky Navbar */
+header {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Main Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Fullscreen Section Box (Each section fills the viewport screen) */
+.section-fullscreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 0 3rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-fullscreen:last-of-type {
+  border-bottom: none;
+}
+
+/* Section Wrapper (Alternative to card class - borderless layout) */
+.section-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.section-fullscreen h2 {
+  margin-top: 0;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.section-fullscreen h3 {
+  color: #1e293b;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Hero Section Layout */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  width: 220px;
+  height: 220px;
+  
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #8badf6;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.hero-info {
+  flex: 1;
+}
+
+.hero-info h1 {
+  margin: 0 0 0.75rem 0;
+  color: #0f172a;
+  font-size: 2.5rem;
+}
+
+.role-badge {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+/* Animated Role Cursor */
+#typed-role {
+  color: #0284c7;
+  font-size: 2rem;
+  border-right: 2px solid #0284c7;
+  padding-right: 3px;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #0284c7; }
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#social-github:hover {
+  background-color: #24292e;
+  color: #ffffff;
+  border-color: #24292e;
+}
+
+#social-linkedin:hover {
+  background-color: #0077b5;
+  color: #ffffff;
+  border-color: #0077b5;
+}
+
+#social-leetcode:hover {
+  background-color: #FFA116;
+  color: #ffffff;
+  border-color: #FFA116;
+}
+
+#social-email:hover {
+  background-color: #ea4335;
+  color: #ffffff;
+  border-color: #ea4335;
+}
+
+/* About Section */
+.about-description {
+  font-size: 1.1rem;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.about-meta {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #475569;
+}
+
+/* Resume Blocks */
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume-block {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.resume-block h4 {
+  margin: 0 0 0.35rem 0;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.resume-block p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Download Resume Button */
+.download-resume-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.download-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.75rem;
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  transition: all 0.25s ease;
+}
+
+.download-resume-btn:hover {
+  background-color: #0369a1;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.download-resume-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.download-resume-btn:hover svg {
+  transform: translateY(2px);
+}
+
+/* Projects Grid & Project Blocks (No pop up / hover animations) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.project-block {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image-container {
+  width: 100%;
+  height: 160px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+}
+
+/* Static image with no zoom or pop effects on hover */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.project-content p {
+  margin: 0 0 1rem 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.project-content a {
+  display: inline-flex;
+  align-items: center;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: auto;
+}
+
+.project-content a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skills-block {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+.skills-block h3 {
+  margin: 0 0 0.6rem 0;
+  color: #0f172a;
+  font-size: 1.15rem;
+}
+
+.skills-detail-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+  color: #334155;
+}
+
+.skills-detail-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.skills-detail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.skills-detail-list strong {
+  color: #0f172a;
+}
+
+.skills-info-text {
+  margin: 0;
+  color: #334155;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.highlights-list {
+  padding-left: 1.25rem;
+  color: #334155;
+  line-height: 1.8;
+}
+
+/* Contact Links */
+.contact-links p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.contact-links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #1e293b;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
