@@ -22,9 +22,9 @@
         </nav>
     </header>
 
-    <div class="container">
-        <!-- SECTION 1: HERO / HOME (FULL PAGE) -->
-        <section id="home" class="section-fullscreen">
+    <!-- SECTION 1: HERO / HOME (FULL PAGE & FULL WIDTH) -->
+    <section id="home" class="section-fullscreen">
+        <div class="container">
             <div class="section-wrapper hero-wrapper">
                 <div class="hero-layout">
                     <!-- IMAGE SECTION WITH A PHOTO -->
@@ -68,7 +68,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <div class="container">
 
         <!-- SECTION 2: ABOUT (FULL PAGE) -->
         <section id="about" class="section-fullscreen">
@@ -251,11 +254,12 @@
                    <div>
                     <br>
                     <h2> Send me a Message Directly</h2>
-                       <form>
+                       <form onsubmit="openForm(event)">
                            <input type="text" name="name" id="name" placeholder="Name" required>
                            <input type="email" name="email" id="email" placeholder="Email" required>
                            <input type="text" name="message" id="message" placeholder="Message" required>
-                           <input type="submit" value="Send Message" onclick="openForm()"> 
+                           <input type="submit" value="Send Message"> 
+                       </form>
                    </div> 
                 
             </div>

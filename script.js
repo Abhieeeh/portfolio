@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
   type();
 });
 
-function openForm(){
+function openForm(e){
+  e.preventDefault();
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message=document.getElementById("message").value;
