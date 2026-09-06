@@ -256,6 +256,42 @@ nav a:hover {
   font-size: 0.95rem;
 }
 
+/* Coursework Section Block */
+.coursework-section-block {
+  margin-bottom: 1.5rem;
+}
+
+.coursework-section-block h4 {
+  margin: 0 0 0.75rem 0;
+  color: #0f172a;
+  font-size: 1.05rem;
+}
+
+.coursework-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.coursework-chip {
+  display: inline-block;
+  background-color: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.coursework-chip:hover {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+}
+
 /* Download Resume Button */
 .download-resume-container {
   margin-top: 2rem;
@@ -413,30 +449,57 @@ nav a:hover {
 }
 
 .skills-block h3 {
-  margin: 0 0 0.6rem 0;
+  margin: 0 0 1rem 0;
   color: #0f172a;
   font-size: 1.15rem;
 }
 
-.skills-detail-list {
-  list-style-type: disc;
-  padding-left: 1.25rem;
-  margin: 0;
-  color: #334155;
+.skills-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
-.skills-detail-list li {
-  margin-bottom: 0.5rem;
-  font-size: 0.98rem;
-  line-height: 1.6;
+.skill-category {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
-.skills-detail-list li:last-child {
-  margin-bottom: 0;
+.skill-category h4 {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  color: #0284c7;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.skills-detail-list strong {
-  color: #0f172a;
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-chip {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.skill-chip:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+  background-color: #f0f9ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.15);
 }
 
 .skills-info-text {

@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!typedRole) return;
 
   const roles = [
+    'Software Engineer',
     'Data Scientist',
-    'Data Analyst',
-    'Full-Stack Developer',
-    'Backend Developer'
+    'Python Developer',
+    'Backend Developer',
+    'Aspiring Machine Learning Engineer'
+ 
   ];
 
   let roleIndex = 0;
@@ -50,13 +52,6 @@ function openForm(e){
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message=document.getElementById("message").value;
-  if (!name || !email || !message){
-    alert("Please fill all the fields")
-    return;
-  }
-  else{
-    const url = `https://docs.google.com/forms/d/e/1FAIpQLScryjdG8WMC8ZGzqWfwslbwnZr-1sCP_XqI8hN2x_t37hwXWA/viewform?usp=pp_url&entry.2005620554=${name}&entry.1045781291=${email}&entry.839337160=${message}+` 
-    window.open(url)
-  }
-
+  const url = `https://docs.google.com/forms/d/e/1FAIpQLScryjdG8WMC8ZGzqWfwslbwnZr-1sCP_XqI8hN2x_t37hwXWA/viewform?usp=pp_url&entry.2005620554=${name}&entry.1045781291=${email}&entry.839337160=${message}+` 
+  window.open(url)
 }
